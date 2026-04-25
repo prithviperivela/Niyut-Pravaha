@@ -1,0 +1,215 @@
+🧠 STEP 1 — COLLECT CURATED PLAYLISTS
+🎯 Goal:
+
+Build:
+
+playlist_ids.json
+🔍 Strategy
+
+Search manually on Spotify:
+
+👉 “Hindi chill”
+👉 “Telugu focus”
+👉 “Deep sleep”
+👉 “DJ mix”
+
+✅ Example playlist structure
+playlist_dict = {
+    "hindi": {
+        "sleep": [],
+        "focus": [],
+        "chill": []
+    },
+    "telugu": {
+        "focus": [],
+        "chill": []
+    },
+    "western": {
+        "dj": [],
+        "sleep": [],
+        "focus": []
+    }
+}
+⚠️ IMPORTANT RULE
+
+ONLY add:
+
+✔ Spotify editorial playlists
+✔ High follower playlists
+✔ Continuous mixes
+
+❌ Avoid random user playlists
+
+📌 Your Task
+
+👉 Collect 20–30 playlists manually first
+
+Paste IDs like:
+
+"hindi": {
+  "sleep": [
+    "37i9dQZF1DX3rxVfibe1L0"
+  ]
+}
+
+👉 Once done, tell me:
+
+"Playlists collected"
+
+Then we move to automation.
+
+⚙️ STEP 2 — EXTRACT TRACKS
+📓 In Notebook
+from api.spotify_client import get_spotify_client
+import pandas as pd
+from tqdm import tqdm
+
+sp = get_spotify_client()
+🔄 Function to extract tracks
+def get_playlist_tracks(playlist_id, region, playlist_type):
+    tracks_data = []
+    
+    results = sp.playlist_tracks(playlist_id)
+    
+    while results:
+        for item in results['items']:
+            track = item['track']
+            
+            if track:
+                tracks_data.append({
+                    "track_id": track['id'],
+                    "track_name": track['name'],
+                    "artist": track['artists'][0]['name'],
+                    "region": region,
+                    "playlist_type": playlist_type
+                })
+        
+        if results['next']:
+            results = sp.next(results)
+        else:
+            results = None
+    
+    return tracks_data
+🔁 Extract all playlists
+all_tracks = []
+
+for region in playlist_dict:
+    for ptype in playlist_dict[region]:
+        for pid in playlist_dict[region][ptype]:
+            
+            tracks = get_playlist_tracks(pid, region, ptype)
+            all_tracks.extend(tracks)
+💾 Save
+df_tracks = pd.DataFrame(all_tracks)
+df_tracks.drop_duplicates(subset=["track_id"], inplace=True)
+
+df_tracks.to_csv("data/raw/tracks.csv", index=False)
+
+👉 Tell me when done:
+
+"Tracks extracted"
+
+🔗 STEP 3 — GENERATE POSITIVE PAIRS
+🎯 Logic:
+
+From playlist order:
+
+t1 → t2
+t2 → t3
+🧠 Code
+def generate_positive_pairs(df):
+    pairs = []
+    
+    grouped = df.groupby(["region", "playlist_type"])
+    
+    for _, group in grouped:
+        track_ids = group["track_id"].tolist()
+        
+        for i in range(len(track_ids) - 1):
+            pairs.append({
+                "song_A": track_ids[i],
+                "song_B": track_ids[i+1],
+                "label": 1
+            })
+    
+    return pd.DataFrame(pairs)
+positive_pairs = generate_positive_pairs(df_tracks)
+
+👉 Tell me:
+
+"Positive pairs ready"
+
+❌ STEP 4 — GENERATE NEGATIVE PAIRS
+🎯 Logic:
+song → random unrelated song
+🧠 Code
+import random
+
+def generate_negative_pairs(df, n_samples):
+    track_ids = df["track_id"].tolist()
+    
+    pairs = []
+    
+    for _ in range(n_samples):
+        a = random.choice(track_ids)
+        b = random.choice(track_ids)
+        
+        if a != b:
+            pairs.append({
+                "song_A": a,
+                "song_B": b,
+                "label": 0
+            })
+    
+    return pd.DataFrame(pairs)
+negative_pairs = generate_negative_pairs(df_tracks, len(positive_pairs))
+
+👉 Say:
+
+"Negative pairs ready"
+
+🎧 STEP 5 — FETCH AUDIO FEATURES
+🔥 Critical Step
+def get_audio_features(track_ids):
+    features = []
+    
+    for i in tqdm(range(0, len(track_ids), 100)):
+        batch = track_ids[i:i+100]
+        results = sp.audio_features(batch)
+        
+        for r in results:
+            if r:
+                features.append(r)
+    
+    return pd.DataFrame(features)
+unique_tracks = df_tracks["track_id"].unique().tolist()
+
+audio_features_df = get_audio_features(unique_tracks)
+
+audio_features_df.to_csv("data/processed/audio_features.csv", index=False)
+
+👉 Say:
+
+"Audio features done"
+
+🧠 STEP 6 — BUILD FINAL DATASET
+final_df = pd.concat([positive_pairs, negative_pairs])
+
+final_df.to_csv("data/processed/pairs_dataset.csv", index=False)
+📦 WHAT YOU WILL HAVE AFTER THIS
+
+✔ 50k–100k labeled pairs
+✔ Audio features dataset
+✔ Multi-region coverage
+
+Exactly as defined in your plan
+
+⚠️ IMPORTANT IMPROVEMENT (DON’T SKIP)
+
+Before moving to Phase 2:
+
+Add:
+
+final_df = final_df.sample(frac=1).reset_index(drop=True)
+
+👉 This shuffles data → prevents bias

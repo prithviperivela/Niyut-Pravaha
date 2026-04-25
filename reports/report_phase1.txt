@@ -1,0 +1,65 @@
+📄 Phase 1 – Step 1 Report
+Objective
+
+Establish a working development environment and verify communication with the Spotify Web API.
+
+What Was Implemented
+
+Created a Conda development environment (musicflow)
+
+Installed required Python libraries
+
+Structured the project with modular folders
+
+Stored Spotify API credentials securely using .env
+
+Built a reusable Spotify API client module
+
+Tested API access using a Jupyter Notebook
+
+Why This Step Is Important
+
+The recommendation system requires large-scale music feature data.
+Spotify’s Web API provides access to:
+
+track metadata
+
+acoustic features
+
+structural analysis
+
+Before building the dataset pipeline, we must ensure secure and stable API access.
+
+Architectural Role
+
+This step establishes the data access layer of the system.
+
+Within the planned 3-layer architecture:
+
+Layer 1 — Pattern Similarity
+Requires Spotify's audio_features dataset, which can only be obtained through API access.
+
+Thus this step forms the foundation of the entire system.
+
+Output
+
+A working Spotify API client capable of:
+
+searching tracks
+
+retrieving playlist data
+
+retrieving audio features (next step)
+
+retrieving audio analysis (later phases)
+
+Next Step
+
+Phase 1 – Step 2 will implement:
+
+✔ Playlist crawler
+✔ Track ID collection
+✔ Audio feature extraction
+✔ Building the raw dataset (~2000 songs)
+
+This begins the real data pipeline for the recommendation engine.

@@ -1,0 +1,238 @@
+Great — let’s first visualize the entire system architecture so you can always mentally map where each phase fits. After that I’ll ask the few decisions needed before we start Phase 1 – Step 2 (dataset collection).
+
+🎧 Flow-Aware Music Recommendation System Architecture
+4
+
+The system can be understood as three main layers plus a data pipeline.
+
+1️⃣ Data Layer (Foundation)
+
+This is where Phase 1 happens.
+
+Data Source
+
+Spotify Web API.
+
+Endpoints we will use:
+
+Endpoint	Purpose
+playlist_tracks	collect songs
+audio_features	acoustic attributes
+audio_analysis	structural song data
+Dataset Structure
+
+We will build a dataset of about:
+
+2000 – 2500 songs
+
+Sources:
+
+Region	Songs
+Hindi	~600
+Telugu	~600
+Western	~800–1000
+
+Each song will contain:
+
+track_id
+region
+tempo
+energy
+loudness
+danceability
+acousticness
+instrumentalness
+speechiness
+valence
+key
+mode
+time_signature
+
+Later we add:
+
+envelope_vector
+2️⃣ Layer 1 – Pattern Similarity
+Goal
+
+Find songs with similar acoustic patterns.
+
+We convert the features into a vector representation.
+
+Example:
+
+feature_vector =
+[energy, tempo, loudness, danceability,
+ acousticness, instrumentalness,
+ speechiness, valence]
+Method
+
+We compute:
+
+cosine_similarity(songA, songB)
+
+This filters the dataset:
+
+2500 songs → ~100 candidates
+3️⃣ Layer 2 – Energy Envelope Matching
+
+This compares how the energy evolves through the song.
+
+Example energy shapes:
+
+Song A
+low → build → drop → sustain
+
+Song B
+low → build → drop → sustain
+
+These feel naturally compatible.
+
+Data Used
+
+Spotify audio_analysis
+
+From this we extract:
+
+segment loudness
+section loudness
+
+We convert this into:
+
+envelope_vector = [e1, e2, e3 ... e100]
+
+Now we compare shapes.
+
+Method
+shape_distance =
+Euclidean(envelope_A , envelope_B)
+
+Candidate pool becomes:
+
+100 songs → ~20 songs
+4️⃣ Layer 3 – Transition Continuity Optimization
+
+This is the key innovation of your project.
+
+We check whether:
+
+Song A ending energy
+≈
+Song B starting energy
+Transition Metric
+transition_gap =
+|mean(last_k(A)) - mean(first_k(B))|
+
+Lower value means smoother transition.
+
+Final Ranking Function
+
+The next song score becomes:
+
+score =
+α * similarity
+- β * shape_distance
+- γ * transition_gap
+
+Weights will be tuned experimentally.
+
+🧱 Implementation Phases
+Phase 1 — Dataset Construction
+
+Goal:
+
+Create the feature dataset.
+
+Steps:
+
+Collect playlist tracks
+
+Extract track IDs
+
+Fetch audio_features
+
+Clean dataset
+
+Normalize features
+
+Assign energy zones
+
+Compute disturbance score
+
+Output:
+
+normalized_tracks.csv
+Phase 2 — Envelope Extraction
+
+Goal:
+
+Extract energy curve for every song.
+
+Steps:
+
+Fetch audio_analysis
+
+Extract segment loudness
+
+Normalize timeline
+
+Create envelope vectors
+
+Output:
+
+envelope_vectors.json
+Phase 3 — Similarity Engine
+
+Goal:
+
+Implement Layer 1 and Layer 2.
+
+Steps:
+
+cosine similarity
+shape similarity
+candidate ranking
+Phase 4 — Transition Optimization
+
+Goal:
+
+Minimize song-to-song disturbance.
+
+Implement:
+
+transition_gap metric
+queue generation
+Phase 5 — Prototype Interface
+
+Goal:
+
+User can test system.
+
+Possible interface:
+
+Streamlit app
+
+User selects a song → engine generates queue.
+
+📊 Full System Flow
+User selects song
+        ↓
+Layer 1
+Pattern similarity filter
+        ↓
+Layer 2
+Energy envelope matching
+        ↓
+Layer 3
+Transition optimization
+        ↓
+Rank candidates
+        ↓
+Generate smooth playlist queue
+📄 Phase 1 Report (Current Status)
+Completed
+
+✔ Spotify developer account
+✔ Conda environment
+✔ Project structure
+✔ Spotify API client
+✔ Jupyter notebook integration
