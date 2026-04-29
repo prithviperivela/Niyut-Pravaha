@@ -22,12 +22,35 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Model artifacts
+# Model artifacts (regenerable; pushed via GitHub Releases instead of git)
 models/*.pkl
 models/*.joblib
 models/*.pt
 models/*.pth
 models/*.onnx
+models/*.keras
+models/*.h5
+
+# Large data artifacts (regenerable from notebooks)
+data/raw_playlist_songs_downloaded/
+data/processed/phase2_feature_matrices/
+data/processed/phase2_fixed_matrices/
+data/processed/*.npz
 
 # Temporary scripts / scratch
 tmp_*.py
+_edit_*.py
+_add_*.py
+notebooks/Untitled*.ipynb
+
+# Local screenshots / images at project root
+/Screenshot*.png
+/Screenshot*.jpg
+
+# Office lock files
+~$*
+
+# AI assistant local context (not part of the project)
+.claude/
+GEMINI.md
+

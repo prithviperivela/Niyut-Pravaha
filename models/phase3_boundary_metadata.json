@@ -1,0 +1,55 @@
+{
+  "phase": 3,
+  "approach": "pure_boundary_classifier",
+  "boundary_features": [
+    "loudness_gap",
+    "abs_loudness_gap",
+    "is_gain_shock",
+    "tail_slope",
+    "head_slope",
+    "slope_clash",
+    "attack_strength_b",
+    "decay_completion_a",
+    "timbre_l2",
+    "timbre_cos",
+    "brightness_gap",
+    "texture_var_diff",
+    "chroma_continuity",
+    "boundary_silence_match"
+  ],
+  "window_seconds": 12,
+  "matrix_columns": {
+    "rms": 0,
+    "centroid": 1,
+    "bandwidth": 2,
+    "rolloff": 3,
+    "zcr": 4,
+    "mfcc": [
+      5,
+      17
+    ],
+    "chroma": [
+      18,
+      29
+    ]
+  },
+  "thresholds": {
+    "tau1": 0.7704114317893982,
+    "tau2": 0.6565264463424683,
+    "tau3": 0.296875,
+    "tau_stack": 0.7510306810585681
+  },
+  "recall_floor": 0.75,
+  "val_metrics": {
+    "p3_roc_auc": 0.6715361926020408,
+    "p3_pr_auc": 0.42991457109785763,
+    "stack_roc_auc": 0.9404296875,
+    "stack_pr_auc": 0.8664199361877394
+  },
+  "sample_weights": {
+    "fp_hard": 3.0,
+    "fn_hard": 2.0,
+    "easy": 1.0
+  },
+  "group_split_by": "source_pid"
+}

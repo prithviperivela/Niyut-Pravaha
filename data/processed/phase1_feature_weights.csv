@@ -1,0 +1,12 @@
+feature,normalized_weight
+diff_loudness,0.3548148
+diff_energy,0.13625489
+diff_instrumentalness,0.08982221
+diff_danceability,0.089354515
+diff_acousticness,0.06941796
+diff_valence,0.04729084
+diff_tempo,0.047097478
+diff_mode,0.044515718
+diff_liveness,0.044259943
+diff_speechiness,0.04305725
+diff_key_fifths,0.034114443

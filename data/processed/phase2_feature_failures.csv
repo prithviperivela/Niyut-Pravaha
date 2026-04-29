@@ -1,0 +1,321 @@
+track_id,track_name,audio_path,error,traceback
+2aQpISWUBToaF84DDiTeRV,Be My Lover (feat. La Bouche) - 2023 Mix,"C:\Users\prith\OneDrive\Desktop\music_pattern_based_recommendation_system\data\raw_playlist_songs_downloaded\western\dj\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\8. Be My Lover (feat. La Bouche) - 2023 Mix.mp3","[Errno 2] No such file or directory: 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\8. Be My Lover (feat. La Bouche) - 2023 Mix.mp3'","Traceback (most recent call last):
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 176, in load
+    y, sr_native = __soundfile_load(path, offset, duration, dtype)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 209, in __soundfile_load
+    context = sf.SoundFile(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\soundfile.py"", line 690, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\soundfile.py"", line 1265, in _open
+    raise LibsndfileError(err, prefix=""Error opening {0!r}: "".format(self.name))
+soundfile.LibsndfileError: Error opening 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\8. Be My Lover (feat. La Bouche) - 2023 Mix.mp3': System error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\prith\AppData\Local\Temp\ipykernel_8600\2946043218.py"", line 42, in <module>
+    matrix = extract_phase2_features(audio_path)
+  File ""C:\Users\prith\AppData\Local\Temp\ipykernel_8600\2566025553.py"", line 13, in extract_phase2_features
+    y, sr = librosa.load(audio_path, sr=sr, mono=True)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 184, in load
+    y, sr_native = __audioread_load(path, offset, duration, dtype)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\decorator.py"", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\util\decorators.py"", line 63, in __wrapper
+    return func(*args, **kwargs)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 240, in __audioread_load
+    reader = audioread.audio_open(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\audioread\__init__.py"", line 126, in audio_open
+    return BackendClass(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\audioread\rawread.py"", line 59, in __init__
+    self._fh = open(filename, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\8. Be My Lover (feat. La Bouche) - 2023 Mix.mp3'
+"
+04R4oiYD4NU6ZkdwlaJSep,Bad Memories - Felix Jaehn Remix,"C:\Users\prith\OneDrive\Desktop\music_pattern_based_recommendation_system\data\raw_playlist_songs_downloaded\western\dj\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\11. Bad Memories - Felix Jaehn Remix.mp3","[Errno 2] No such file or directory: 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\11. Bad Memories - Felix Jaehn Remix.mp3'","Traceback (most recent call last):
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 176, in load
+    y, sr_native = __soundfile_load(path, offset, duration, dtype)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 209, in __soundfile_load
+    context = sf.SoundFile(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\soundfile.py"", line 690, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\soundfile.py"", line 1265, in _open
+    raise LibsndfileError(err, prefix=""Error opening {0!r}: "".format(self.name))
+soundfile.LibsndfileError: Error opening 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\11. Bad Memories - Felix Jaehn Remix.mp3': System error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\prith\AppData\Local\Temp\ipykernel_8600\2946043218.py"", line 42, in <module>
+    matrix = extract_phase2_features(audio_path)
+  File ""C:\Users\prith\AppData\Local\Temp\ipykernel_8600\2566025553.py"", line 13, in extract_phase2_features
+    y, sr = librosa.load(audio_path, sr=sr, mono=True)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 184, in load
+    y, sr_native = __audioread_load(path, offset, duration, dtype)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\decorator.py"", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\util\decorators.py"", line 63, in __wrapper
+    return func(*args, **kwargs)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 240, in __audioread_load
+    reader = audioread.audio_open(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\audioread\__init__.py"", line 126, in audio_open
+    return BackendClass(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\audioread\rawread.py"", line 59, in __init__
+    self._fh = open(filename, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\11. Bad Memories - Felix Jaehn Remix.mp3'
+"
+6m4wKDh7iIqfgKRbrIPbz9,All Around The World (La La La La La),"C:\Users\prith\OneDrive\Desktop\music_pattern_based_recommendation_system\data\raw_playlist_songs_downloaded\western\dj\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\44. All Around The World (La La La La La).mp3","[Errno 2] No such file or directory: 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\44. All Around The World (La La La La La).mp3'","Traceback (most recent call last):
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 176, in load
+    y, sr_native = __soundfile_load(path, offset, duration, dtype)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 209, in __soundfile_load
+    context = sf.SoundFile(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\soundfile.py"", line 690, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\soundfile.py"", line 1265, in _open
+    raise LibsndfileError(err, prefix=""Error opening {0!r}: "".format(self.name))
+soundfile.LibsndfileError: Error opening 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\44. All Around The World (La La La La La).mp3': System error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\prith\AppData\Local\Temp\ipykernel_8600\2946043218.py"", line 42, in <module>
+    matrix = extract_phase2_features(audio_path)
+  File ""C:\Users\prith\AppData\Local\Temp\ipykernel_8600\2566025553.py"", line 13, in extract_phase2_features
+    y, sr = librosa.load(audio_path, sr=sr, mono=True)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 184, in load
+    y, sr_native = __audioread_load(path, offset, duration, dtype)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\decorator.py"", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\util\decorators.py"", line 63, in __wrapper
+    return func(*args, **kwargs)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 240, in __audioread_load
+    reader = audioread.audio_open(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\audioread\__init__.py"", line 126, in audio_open
+    return BackendClass(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\audioread\rawread.py"", line 59, in __init__
+    self._fh = open(filename, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\44. All Around The World (La La La La La).mp3'
+"
+6iW38RGqdDGOofmz2HeXLW,Piece Of Your Heart - Alok Remix,"C:\Users\prith\OneDrive\Desktop\music_pattern_based_recommendation_system\data\raw_playlist_songs_downloaded\western\dj\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\57. Piece Of Your Heart - Alok Remix.mp3","[Errno 2] No such file or directory: 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\57. Piece Of Your Heart - Alok Remix.mp3'","Traceback (most recent call last):
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 176, in load
+    y, sr_native = __soundfile_load(path, offset, duration, dtype)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 209, in __soundfile_load
+    context = sf.SoundFile(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\soundfile.py"", line 690, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\soundfile.py"", line 1265, in _open
+    raise LibsndfileError(err, prefix=""Error opening {0!r}: "".format(self.name))
+soundfile.LibsndfileError: Error opening 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\57. Piece Of Your Heart - Alok Remix.mp3': System error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\prith\AppData\Local\Temp\ipykernel_8600\2946043218.py"", line 42, in <module>
+    matrix = extract_phase2_features(audio_path)
+  File ""C:\Users\prith\AppData\Local\Temp\ipykernel_8600\2566025553.py"", line 13, in extract_phase2_features
+    y, sr = librosa.load(audio_path, sr=sr, mono=True)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 184, in load
+    y, sr_native = __audioread_load(path, offset, duration, dtype)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\decorator.py"", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\util\decorators.py"", line 63, in __wrapper
+    return func(*args, **kwargs)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 240, in __audioread_load
+    reader = audioread.audio_open(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\audioread\__init__.py"", line 126, in audio_open
+    return BackendClass(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\audioread\rawread.py"", line 59, in __init__
+    self._fh = open(filename, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\57. Piece Of Your Heart - Alok Remix.mp3'
+"
+4atLPkcljMp14JBaigYFKC,We Are The People - southstar Remix,"C:\Users\prith\OneDrive\Desktop\music_pattern_based_recommendation_system\data\raw_playlist_songs_downloaded\western\dj\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\65. We Are The People - southstar Remix.mp3","[Errno 2] No such file or directory: 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\65. We Are The People - southstar Remix.mp3'","Traceback (most recent call last):
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 176, in load
+    y, sr_native = __soundfile_load(path, offset, duration, dtype)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 209, in __soundfile_load
+    context = sf.SoundFile(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\soundfile.py"", line 690, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\soundfile.py"", line 1265, in _open
+    raise LibsndfileError(err, prefix=""Error opening {0!r}: "".format(self.name))
+soundfile.LibsndfileError: Error opening 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\65. We Are The People - southstar Remix.mp3': System error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\prith\AppData\Local\Temp\ipykernel_8600\2946043218.py"", line 42, in <module>
+    matrix = extract_phase2_features(audio_path)
+  File ""C:\Users\prith\AppData\Local\Temp\ipykernel_8600\2566025553.py"", line 13, in extract_phase2_features
+    y, sr = librosa.load(audio_path, sr=sr, mono=True)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 184, in load
+    y, sr_native = __audioread_load(path, offset, duration, dtype)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\decorator.py"", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\util\decorators.py"", line 63, in __wrapper
+    return func(*args, **kwargs)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 240, in __audioread_load
+    reader = audioread.audio_open(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\audioread\__init__.py"", line 126, in audio_open
+    return BackendClass(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\audioread\rawread.py"", line 59, in __init__
+    self._fh = open(filename, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\65. We Are The People - southstar Remix.mp3'
+"
+4ekDggjElGJX9kNSOtnbVf,Infinity - Dubdogz & Bhaskar Edit,"C:\Users\prith\OneDrive\Desktop\music_pattern_based_recommendation_system\data\raw_playlist_songs_downloaded\western\dj\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\68. Infinity - Dubdogz & Bhaskar Edit.mp3","[Errno 2] No such file or directory: 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\68. Infinity - Dubdogz & Bhaskar Edit.mp3'","Traceback (most recent call last):
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 176, in load
+    y, sr_native = __soundfile_load(path, offset, duration, dtype)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 209, in __soundfile_load
+    context = sf.SoundFile(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\soundfile.py"", line 690, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\soundfile.py"", line 1265, in _open
+    raise LibsndfileError(err, prefix=""Error opening {0!r}: "".format(self.name))
+soundfile.LibsndfileError: Error opening 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\68. Infinity - Dubdogz & Bhaskar Edit.mp3': System error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\prith\AppData\Local\Temp\ipykernel_8600\2946043218.py"", line 42, in <module>
+    matrix = extract_phase2_features(audio_path)
+  File ""C:\Users\prith\AppData\Local\Temp\ipykernel_8600\2566025553.py"", line 13, in extract_phase2_features
+    y, sr = librosa.load(audio_path, sr=sr, mono=True)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 184, in load
+    y, sr_native = __audioread_load(path, offset, duration, dtype)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\decorator.py"", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\util\decorators.py"", line 63, in __wrapper
+    return func(*args, **kwargs)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 240, in __audioread_load
+    reader = audioread.audio_open(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\audioread\__init__.py"", line 126, in audio_open
+    return BackendClass(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\audioread\rawread.py"", line 59, in __init__
+    self._fh = open(filename, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\68. Infinity - Dubdogz & Bhaskar Edit.mp3'
+"
+03bA59As8j2ODRyZRE3X7X,"Never Leave You (Uh Oooh, Uh Oooh)","C:\Users\prith\OneDrive\Desktop\music_pattern_based_recommendation_system\data\raw_playlist_songs_downloaded\western\dj\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\90. Never Leave You (Uh Oooh, Uh Oooh).mp3","[Errno 2] No such file or directory: 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\90. Never Leave You (Uh Oooh, Uh Oooh).mp3'","Traceback (most recent call last):
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 176, in load
+    y, sr_native = __soundfile_load(path, offset, duration, dtype)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 209, in __soundfile_load
+    context = sf.SoundFile(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\soundfile.py"", line 690, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\soundfile.py"", line 1265, in _open
+    raise LibsndfileError(err, prefix=""Error opening {0!r}: "".format(self.name))
+soundfile.LibsndfileError: Error opening 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\90. Never Leave You (Uh Oooh, Uh Oooh).mp3': System error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\prith\AppData\Local\Temp\ipykernel_8600\2946043218.py"", line 42, in <module>
+    matrix = extract_phase2_features(audio_path)
+  File ""C:\Users\prith\AppData\Local\Temp\ipykernel_8600\2566025553.py"", line 13, in extract_phase2_features
+    y, sr = librosa.load(audio_path, sr=sr, mono=True)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 184, in load
+    y, sr_native = __audioread_load(path, offset, duration, dtype)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\decorator.py"", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\util\decorators.py"", line 63, in __wrapper
+    return func(*args, **kwargs)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 240, in __audioread_load
+    reader = audioread.audio_open(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\audioread\__init__.py"", line 126, in audio_open
+    return BackendClass(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\audioread\rawread.py"", line 59, in __init__
+    self._fh = open(filename, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\90. Never Leave You (Uh Oooh, Uh Oooh).mp3'
+"
+2A0CxheiQGQdCiKtOR7jMP,The Passenger (LaLaLa) [feat. MOKABY],"C:\Users\prith\OneDrive\Desktop\music_pattern_based_recommendation_system\data\raw_playlist_songs_downloaded\western\dj\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\97. The Passenger (LaLaLa) [feat. MOKABY].mp3","[Errno 2] No such file or directory: 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\97. The Passenger (LaLaLa) [feat. MOKABY].mp3'","Traceback (most recent call last):
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 176, in load
+    y, sr_native = __soundfile_load(path, offset, duration, dtype)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 209, in __soundfile_load
+    context = sf.SoundFile(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\soundfile.py"", line 690, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\soundfile.py"", line 1265, in _open
+    raise LibsndfileError(err, prefix=""Error opening {0!r}: "".format(self.name))
+soundfile.LibsndfileError: Error opening 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\97. The Passenger (LaLaLa) [feat. MOKABY].mp3': System error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\prith\AppData\Local\Temp\ipykernel_8600\2946043218.py"", line 42, in <module>
+    matrix = extract_phase2_features(audio_path)
+  File ""C:\Users\prith\AppData\Local\Temp\ipykernel_8600\2566025553.py"", line 13, in extract_phase2_features
+    y, sr = librosa.load(audio_path, sr=sr, mono=True)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 184, in load
+    y, sr_native = __audioread_load(path, offset, duration, dtype)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\decorator.py"", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\util\decorators.py"", line 63, in __wrapper
+    return func(*args, **kwargs)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 240, in __audioread_load
+    reader = audioread.audio_open(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\audioread\__init__.py"", line 126, in audio_open
+    return BackendClass(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\audioread\rawread.py"", line 59, in __init__
+    self._fh = open(filename, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\97. The Passenger (LaLaLa) [feat. MOKABY].mp3'
+"
+5rEGTcnrt1bkknrMuQf1Bo,"For Felix (After Violin Concerto in E Minor, Op. 64: I. Allegro molto appassionato)","C:\Users\prith\OneDrive\Desktop\music_pattern_based_recommendation_system\data\raw_playlist_songs_downloaded\western\focus\Calm Study _ Instrumentals for Focus, Work, Reading\43. For Felix (After Violin Concerto in E Minor, Op. 64_ I. Allegro molto appassionato).mp3","[Errno 2] No such file or directory: 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\focus\\Calm Study _ Instrumentals for Focus, Work, Reading\\43. For Felix (After Violin Concerto in E Minor, Op. 64_ I. Allegro molto appassionato).mp3'","Traceback (most recent call last):
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 176, in load
+    y, sr_native = __soundfile_load(path, offset, duration, dtype)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 209, in __soundfile_load
+    context = sf.SoundFile(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\soundfile.py"", line 690, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\soundfile.py"", line 1265, in _open
+    raise LibsndfileError(err, prefix=""Error opening {0!r}: "".format(self.name))
+soundfile.LibsndfileError: Error opening 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\focus\\Calm Study _ Instrumentals for Focus, Work, Reading\\43. For Felix (After Violin Concerto in E Minor, Op. 64_ I. Allegro molto appassionato).mp3': System error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\prith\AppData\Local\Temp\ipykernel_8600\2946043218.py"", line 42, in <module>
+    matrix = extract_phase2_features(audio_path)
+  File ""C:\Users\prith\AppData\Local\Temp\ipykernel_8600\2566025553.py"", line 13, in extract_phase2_features
+    y, sr = librosa.load(audio_path, sr=sr, mono=True)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 184, in load
+    y, sr_native = __audioread_load(path, offset, duration, dtype)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\decorator.py"", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\util\decorators.py"", line 63, in __wrapper
+    return func(*args, **kwargs)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 240, in __audioread_load
+    reader = audioread.audio_open(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\audioread\__init__.py"", line 126, in audio_open
+    return BackendClass(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\audioread\rawread.py"", line 59, in __init__
+    self._fh = open(filename, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\focus\\Calm Study _ Instrumentals for Focus, Work, Reading\\43. For Felix (After Violin Concerto in E Minor, Op. 64_ I. Allegro molto appassionato).mp3'
+"
+59o6ojGNGJOYiVJSzC6Lsa,Memories (feat. Kid Cudi) - 2021 Remix,"C:\Users\prith\OneDrive\Desktop\music_pattern_based_recommendation_system\data\raw_playlist_songs_downloaded\western\dj\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\54. Memories (feat. Kid Cudi) - 2021 Remix.mp3","[Errno 2] No such file or directory: 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\54. Memories (feat. Kid Cudi) - 2021 Remix.mp3'","Traceback (most recent call last):
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 176, in load
+    y, sr_native = __soundfile_load(path, offset, duration, dtype)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 209, in __soundfile_load
+    context = sf.SoundFile(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\soundfile.py"", line 690, in __init__
+    self._file = self._open(file, mode_int, closefd)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\soundfile.py"", line 1265, in _open
+    raise LibsndfileError(err, prefix=""Error opening {0!r}: "".format(self.name))
+soundfile.LibsndfileError: Error opening 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\54. Memories (feat. Kid Cudi) - 2021 Remix.mp3': System error.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ""C:\Users\prith\AppData\Local\Temp\ipykernel_8600\2946043218.py"", line 42, in <module>
+    matrix = extract_phase2_features(audio_path)
+  File ""C:\Users\prith\AppData\Local\Temp\ipykernel_8600\2566025553.py"", line 13, in extract_phase2_features
+    y, sr = librosa.load(audio_path, sr=sr, mono=True)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 184, in load
+    y, sr_native = __audioread_load(path, offset, duration, dtype)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\decorator.py"", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\util\decorators.py"", line 63, in __wrapper
+    return func(*args, **kwargs)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\librosa\core\audio.py"", line 240, in __audioread_load
+    reader = audioread.audio_open(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\audioread\__init__.py"", line 126, in audio_open
+    return BackendClass(path)
+  File ""C:\Users\prith\anaconda3\envs\musicflow\lib\site-packages\audioread\rawread.py"", line 59, in __init__
+    self._fh = open(filename, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\prith\\OneDrive\\Desktop\\music_pattern_based_recommendation_system\\data\\raw_playlist_songs_downloaded\\western\\dj\\DJ Music 2026 _ Best DJ Mix, Club Remixes, Top DJ Songs, DJ Hits, DJ Anthems, DJ Playlist, DJ Beats\\54. Memories (feat. Kid Cudi) - 2021 Remix.mp3'
+"

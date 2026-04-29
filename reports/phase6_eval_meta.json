@@ -1,0 +1,85 @@
+{
+  "eval_length": 15,
+  "beam_k": 2,
+  "top_n": 50,
+  "pool_size": 1315,
+  "n_test_playlists": 5,
+  "weights": {
+    "alpha": 0.4,
+    "beta": 0.35,
+    "gamma": 0.25,
+    "lambda": 0.3
+  },
+  "aggregate": {
+    "random": {
+      "recall@K": 0.034,
+      "mean_trans": 0.159,
+      "std_trans": 0.246,
+      "mean_drift": 0.538,
+      "max_drift": 0.809,
+      "n_playlists": 5
+    },
+    "p1_greedy": {
+      "recall@K": 0.108,
+      "mean_trans": 0.824,
+      "std_trans": 0.176,
+      "mean_drift": 0.298,
+      "max_drift": 0.495,
+      "n_playlists": 5
+    },
+    "stack_greedy": {
+      "recall@K": 0.061,
+      "mean_trans": 0.969,
+      "std_trans": 0.016,
+      "mean_drift": 0.306,
+      "max_drift": 0.522,
+      "n_playlists": 5
+    },
+    "beam_full": {
+      "recall@K": 0.116,
+      "mean_trans": 0.948,
+      "std_trans": 0.02,
+      "mean_drift": 0.167,
+      "max_drift": 0.283,
+      "n_playlists": 5
+    }
+  },
+  "ablation": {
+    "full": {
+      "recall@K": 0.116,
+      "mean_trans": 0.948,
+      "mean_drift": 0.167,
+      "max_drift": 0.283
+    },
+    "no_P3": {
+      "recall@K": 0.118,
+      "mean_trans": 0.88,
+      "mean_drift": 0.154,
+      "max_drift": 0.244
+    },
+    "no_P2": {
+      "recall@K": 0.116,
+      "mean_trans": 0.946,
+      "mean_drift": 0.174,
+      "max_drift": 0.305
+    },
+    "no_P1": {
+      "recall@K": 0.109,
+      "mean_trans": 0.948,
+      "mean_drift": 0.19,
+      "max_drift": 0.364
+    },
+    "no_anchor": {
+      "recall@K": 0.093,
+      "mean_trans": 0.957,
+      "mean_drift": 0.169,
+      "max_drift": 0.273
+    },
+    "no_drift": {
+      "recall@K": 0.09,
+      "mean_trans": 0.964,
+      "mean_drift": 0.264,
+      "max_drift": 0.488
+    }
+  }
+}
