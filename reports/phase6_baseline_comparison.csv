@@ -1,0 +1,5 @@
+system,recall@K,mean_trans,std_trans,mean_drift,max_drift
+random,0.034,0.159,0.246,0.538,0.809
+p1_greedy,0.108,0.824,0.176,0.298,0.495
+stack_greedy,0.061,0.969,0.016,0.306,0.522
+beam_full,0.116,0.948,0.02,0.167,0.283

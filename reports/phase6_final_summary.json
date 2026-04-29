@@ -1,0 +1,116 @@
+{
+  "pool_size": 1315,
+  "n_test_playlists": 5,
+  "phase_wise": {
+    "Phase 1 (global)": {
+      "roc_auc": 0.947,
+      "pr_auc": 0.88,
+      "precision_1": 0.832,
+      "recall_1": 0.75,
+      "precision_0": 0.881,
+      "recall_0": 0.924,
+      "threshold": 0.77
+    },
+    "Phase 2 (envelope)": {
+      "roc_auc": 0.943,
+      "pr_auc": 0.867,
+      "precision_1": 0.845,
+      "recall_1": 0.754,
+      "precision_0": 0.883,
+      "recall_0": 0.931,
+      "threshold": 0.657
+    },
+    "Phase 3 (boundary)": {
+      "roc_auc": 0.672,
+      "pr_auc": 0.43,
+      "precision_1": 0.444,
+      "recall_1": 0.826,
+      "precision_0": 0.847,
+      "recall_0": 0.482,
+      "threshold": 0.297
+    },
+    "Stacked (P1+P2+P3)": {
+      "roc_auc": 0.94,
+      "pr_auc": 0.866,
+      "precision_1": 0.828,
+      "recall_1": 0.754,
+      "precision_0": 0.882,
+      "recall_0": 0.922,
+      "threshold": 0.751
+    }
+  },
+  "pipeline": {
+    "random": {
+      "recall@K": 0.034,
+      "mean_trans": 0.159,
+      "std_trans": 0.246,
+      "mean_drift": 0.538,
+      "max_drift": 0.809
+    },
+    "p1_greedy": {
+      "recall@K": 0.108,
+      "mean_trans": 0.824,
+      "std_trans": 0.176,
+      "mean_drift": 0.298,
+      "max_drift": 0.495
+    },
+    "stack_greedy": {
+      "recall@K": 0.061,
+      "mean_trans": 0.969,
+      "std_trans": 0.016,
+      "mean_drift": 0.306,
+      "max_drift": 0.522
+    },
+    "beam_full": {
+      "recall@K": 0.116,
+      "mean_trans": 0.948,
+      "std_trans": 0.02,
+      "mean_drift": 0.167,
+      "max_drift": 0.283
+    }
+  },
+  "ablation": {
+    "full": {
+      "recall@K": 0.116,
+      "mean_trans": 0.948,
+      "mean_drift": 0.167,
+      "max_drift": 0.283
+    },
+    "no_P3": {
+      "recall@K": 0.118,
+      "mean_trans": 0.88,
+      "mean_drift": 0.154,
+      "max_drift": 0.244
+    },
+    "no_P2": {
+      "recall@K": 0.116,
+      "mean_trans": 0.946,
+      "mean_drift": 0.174,
+      "max_drift": 0.305
+    },
+    "no_P1": {
+      "recall@K": 0.109,
+      "mean_trans": 0.948,
+      "mean_drift": 0.19,
+      "max_drift": 0.364
+    },
+    "no_anchor": {
+      "recall@K": 0.093,
+      "mean_trans": 0.957,
+      "mean_drift": 0.169,
+      "max_drift": 0.273
+    },
+    "no_drift": {
+      "recall@K": 0.09,
+      "mean_trans": 0.964,
+      "mean_drift": 0.264,
+      "max_drift": 0.488
+    }
+  },
+  "weights": {
+    "alpha": 0.4,
+    "beta": 0.35,
+    "gamma": 0.25,
+    "lambda": 0.3
+  }
+}

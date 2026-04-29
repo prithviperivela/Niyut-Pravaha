@@ -1,0 +1,11 @@
+{
+    "phase": 2,
+    "model_type": "Contrastive_Siamese_1D_CNN",
+    "best_threshold": 0.7558473944664001,
+    "roc_auc": 0.8927946688879634,
+    "input_shape": [
+        128,
+        30
+    ],
+    "embedding_dim": 128
+}
