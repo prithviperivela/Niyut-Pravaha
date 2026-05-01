@@ -66,13 +66,3 @@
 
 
 
-&#x20; Required variables:
-
-&#x20; - `SPOTIFY\_CLIENT\_ID`
-
-&#x20; - `SPOTIFY\_CLIENT\_SECRET`
-
-&#x20; - `SPOTIPY\_REDIRECT\_URI`
-
-&#x20; "@
-
